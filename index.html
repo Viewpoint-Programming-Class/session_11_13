@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stocks</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn-success" onclick="showAddCompanyForm()">Add Company</button>
+    <form name="addCompanyForm" id="addCompanyForm" style="display: none;">
+        <input type="text" placeholder="Company Name" name="name"></input>
+        <input type="number" placeholder="Company Price" name="price"></input>
+        <input type="checkbox" name="isUsCompany" id="isUsCompany"></input>
+        <label for="isUsCompany">Is US Company</label>
+        <input type="text" name="ticker" placeholder="Ticker"></input>
+        <button type="button" onclick="submitForm()" id="submit_btn">Submit</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Is US Company</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
